@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Paid Script Hub</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: gray;
+            color: white;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-bottom: 4px solid blue;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #2a2a2a;
+            border: 2px solid blue;
+            border-radius: 10px;
+            padding: 20px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        }
+        .card h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .script-box {
+            background-color: #1e1e1e;
+            color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 1.1em;
+            word-wrap: break-word;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px 0;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2a2a2a;
+            color: #b3b3b3;
+            font-size: 0.9em;
+            margin-top: 20px;
+            border-top: 4px solid blue;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Roblox Paid Script Hub</h1>
+        <p>Exclusive premium scripts for your Roblox experience</p>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Premium Script 1</h2>
+            <p>Highly rated! Perfect for trolling and fun gameplay.</p>
+            <div class="script-box">
+                loadstring(game:HttpGet('https://premiumscript1.com/script'))()
+            </div>
+            <button onclick="copyScript('loadstring(game:HttpGet(\'https://premiumscript1.com/script\'))()')">Copy Script to Clipboard</button>
+            <button onclick="moreInfo('https://premiumscript1.com/info')">More Info</button>
+        </div>
+        <div class="card">
+            <h2>Premium Script 2</h2>
+            <p>Boost your gameplay with advanced features and tools.</p>
+            <div class="script-box">
+                loadstring(game:HttpGet('https://premiumscript2.com/script'))()
+            </div>
+            <button onclick="copyScript('loadstring(game:HttpGet(\'https://premiumscript2.com/script\'))()')">Copy Script to Clipboard</button>
+            <button onclick="moreInfo('https://premiumscript2.com/info')">More Info</button>
+        </div>
+        <div class="card">
+            <h2>Premium Script 3</h2>
+            <p>Ultimate script for automation and in-game advantages.</p>
+            <div class="script-box">
+                loadstring(game:HttpGet('https://premiumscript3.com/script'))()
+            </div>
+            <button onclick="copyScript('loadstring(game:HttpGet(\'https://premiumscript3.com/script\'))()')">Copy Script to Clipboard</button>
+            <button onclick="moreInfo('https://premiumscript3.com/info')">More Info</button>
+        </div>
+    </div>
+    <footer>
+        Roblox Paid Script Hub - Premium Tools for Players
+    </footer>
+    <script>
+        function copyScript(scriptText) {
+            navigator.clipboard.writeText(scriptText).then(() => {
+                alert('Script copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy script: ' + err);
+            });
+        }
+
+        function moreInfo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
